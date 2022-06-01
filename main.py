@@ -76,8 +76,22 @@ import cmath
 # alloc=[[int(input()) for i in range(n)] for i in range(m)];
 # print(alloc)
 
-for i in range(int(input())):
-    a,b=list(map(int,input().split(' ')))
-    print(b//(a*a))
+
+
+
+def numberOfPaths(m, n):
+    # If either given row number is first
+    # or given column number is first
+    if (m == 1 or n == 1):
+        return 1
+
+    # If diagonal movements are allowed
+    # then the last addition
+    # is required.
+    print(n,m)
+    return numberOfPaths(m - 1, n) + numberOfPaths(m, n - 1)
+x=int(input())
+y=int(input())
+print(numberOfPaths(x,y))
 
 
