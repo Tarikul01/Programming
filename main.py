@@ -8,18 +8,95 @@ from itertools import combinations, combinations_with_replacement, groupby, perm
 from time import ctime, time, gmtime, localtime, mktime, strptime, strftime
 from pip._vendor.distlib.compat import raw_input
 
-# Assainament
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import pandas as pd
-#Read Student Grades .csv file and divide the data into dependent and independent variables.
-# data = pd.read_csv('Student_Grades_Data.csv')
-# data.head()
-
 import cmath
-# ath,calendar
-# import sys
-# sys.setrecursionlimit(10**20)
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+ii = lambda: int(input())
+mi = lambda: map(int, input().split())
+li = lambda: list(mi())
+
+def solution():
+    n=int(input())
+    # str=input()
+    # arr=[]
+    # tmp=0
+    # for i in range(n):
+    #     if len("".join(set(str[:i+1])))<i+1:
+    #         tmp=i
+    #         break
+    # print(len("".join(set(str[:tmp])))+len("".join(set(str[tmp:]))))
+
+    # if n==1:
+    #     print(1)
+    #     return
+    # elif n==0:
+    #     print(0)
+    #     return
+    #
+    # l=0
+    # r=len(str)-1
+    # while (str[l]=='0' and str[r]=='1' and l<=r) or (str[l]=='1' and str[r]=='0' and l<=r):
+    #     l=l+1
+    #     r=r-1
+    # print(len(str[l:r+1]))
+
+
+
+
+
+    # u=0
+    # r=0
+    # for  i in range(n):
+    #
+    #     if str[i]=="U":
+    #         u=u+1
+    #     elif str[i]=="D":
+    #         u=u-1
+    #     elif str[i]=="R":
+    #         r=r+1
+    #     elif str[i]=="L":
+    #         r=r-1
+    #
+    #     if u == 1 and r == 1:
+    #         print("YES")
+    #         return
+    # print("NO")
+
+    # str="codeforces"
+    # ch=input()
+    # if ch in str:
+    #     print("YES")
+    # else:
+    #     print("NO")
+    # sm=sum(arr)
+    arr=li()
+    check=0
+    check1=0
+    sm=sum(arr)
+    for i in range(n-1):
+        if arr[i]==-1 and arr[i]==arr[i+1]:
+            check=1
+        if arr[i]==-1:
+            check1=1
+    if arr[n-1]==-1:
+        check1=1
+    if check==1:
+        print(sm+4)
+    elif check1==1:
+        print(sm)
+    else:
+        print(sm-4)
+
+
+
+
+
+
+
+for i in range(int(input())):
+    solution()
+
+
 
 
 # End  library and  litteral
@@ -39,59 +116,11 @@ import cmath
 #     else:
 #         return False
 
-# t0=time()
-# t0=time()
-# for _ in range(int(input())):
-#     a = int(input()) + 0.99
-#     print(a)
-#     print(a**.5)
-#     print(a**(1/3))
-#     print(a**(1/6))
-#     print(int(a ** 0.5) + int(a ** (1 / 3)) - int(a ** (1 / 6)))
-# s="abcabcbb"
-# charset=set()
-# l=0;
-# res=0
-# for i in range(len(s)):
-#     while(s[i] in charset):
-#         print(l)
-#         charset.remove(s[l])
-#         print(charset)
-#         l+=1
-#
-#     charset.add(s[i])
-#     print(charset)
-#     res=max(res,i-l+1)
-# print(res)
-# n=3;
-# m=3;
-# need=[];
-# for i in range(n):
-#     need.append(list(map(int,input().split(' '))))
-# print(need);
-# lst=list(map(int,input().split(' ')));
-# print(lst);
-# n=int(input("Number of process:"))
-# m=int(input("Number of Resources:"))
-# alloc=[[int(input()) for i in range(n)] for i in range(m)];
-# print(alloc)
 
 
 
 
-def numberOfPaths(m, n):
-    # If either given row number is first
-    # or given column number is first
-    if (m == 1 or n == 1):
-        return 1
 
-    # If diagonal movements are allowed
-    # then the last addition
-    # is required.
-    print(n,m)
-    return numberOfPaths(m - 1, n) + numberOfPaths(m, n - 1)
-x=int(input())
-y=int(input())
-print(numberOfPaths(x,y))
+
 
 
